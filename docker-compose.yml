@@ -42,7 +42,7 @@ services:
       ACCESS_TOKEN_EXPIRE_MINUTES: 30
       REFRESH_TOKEN_EXPIRE_DAYS: 7
       MAX_FILE_SIZE: 10485760
-      CORS_ORIGINS: http://3x.tw1.ru:8000,http://3x.tw1.ru:3000,http://localhost:3000
+      CORS_ORIGINS: https://aleexsd-jobchat-9053.twc1.net,http://aleexsd-jobchat-9053.twc1.net,http://localhost:3000
     depends_on:
       postgres:
         condition: service_healthy
@@ -62,8 +62,8 @@ services:
     ports:
       - "3000:80"
     environment:
-      VITE_API_URL: http://3x.tw1.ru:8000/api
-      VITE_WS_URL: ws://3x.tw1.ru:8000
+      VITE_API_URL: https://aleexsd-jobchat-9053.twc1.net/api
+      VITE_WS_URL: wss://aleexsd-jobchat-9053.twc1.net
     depends_on:
       - backend
     networks:
